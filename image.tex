@@ -1,0 +1,88 @@
+\documentclass[10pt,a4j]{jarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{url}
+\usepackage{here}
+\usepackage{amsmath}
+\usepackage{subfig}
+
+\newcommand{\figref}[1]{図\ref{#1}}
+\newcommand{\subfigref}[2]{図\ref{#1}\subref{#2}}
+
+
+
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+\renewcommand{\dbltopfraction}{1.0}
+\renewcommand{\textfraction}{0.01}
+\renewcommand{\floatpagefraction}{1.0}
+\renewcommand{\dblfloatpagefraction}{1.0}
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\setcounter{totalnumber}{10}
+
+%----------表紙設定----------%
+\makeatletter
+\def\id#1{\def\@id{#1}}
+\def\department#1{\def\@department{#1}}
+\def\faculty#1{\def\@faculty{#1}}
+\def\adviser#1{\def\@adviser{#1}}
+\def\@maketitle{
+\begin{center}
+{\Large \@title \par} % 論文のタイトル部分
+\vspace{40mm}
+{\large \@date\par} % 提出年月日部分
+\vspace{15mm}
+{\large \@faculty \par} % 学部
+\vspace{15mm}
+{\large \@department \par} % 所属部分
+\vspace{50mm}
+{\large \@id \par} % 学籍番号
+\vspace{5mm}
+{\large \@author \par} % 氏名
+\vspace{5mm}
+{\large 指導教員:\ \@adviser \par} % 指導教員
+\vspace{10mm}
+{\large 豊橋技術科学大学 \par} %大学名
+\end{center}
+\par\vskip 1.5em
+}
+\makeatother
+
+\title{屋内における見回りロボットの開発} % 論文タイトル
+\date{\today} % 日付
+\faculty{学部（工学）} % 学部
+\department{情報・知能工学課程} % 所属課程
+\id{153321} % 学籍番号
+\author{加藤\ 翼} % 氏名
+\adviser{三浦\ 純} % 指導教員
+
+\begin{document}
+%---表紙---%
+%	\maketitle
+%	\thispagestyle{empty}
+%	\setcounter{page}{0}
+%	\newpage
+	
+%---概要---%
+\input{1.tex}
+\input{2.tex}
+\input{3.tex}
+\newpage
+\begin{thebibliography}{9}
+%	\fontsize{6.5pt}{0pt}\selectfont
+	\bibitem{bunken1}{国立社会保障・人口問題研究所，"日本の世帯数の将来推計"，2013年}
+	\bibitem{bunken2}{森 武俊，佐藤 知正，"ロボティックルーム1・2・3の開発",2008，電子情報通信学会誌　91(5)，pp 402-410}
+	\bibitem{riba}{独立行政法人 理化学研究所 ，"RIBA"，\url{http://rtc.nagoya.riken.jp/RIBA/} }
+	\bibitem{kani}{可児周平，三浦純，"移動ロボットによる住環境センシングと生活支援への応用"，2015，ロボティクス・メカトロニクス講演会 2015}
+	\bibitem{hsr}{トヨタ・パートナーロボット，\url{http://www．toyota．co．jp/jpn/tech/partner_robot/}，2016/12 accessed}
+	\bibitem{ros}{ROS．org ， \url{http://wiki．ros．org/ja} }
+	\bibitem{gmapping}{gmapping， \url{http://wiki.ros.org/gmapping}}
+	\bibitem{thrun2001}{S.Thrun，W.Burgar， D.Fox，"Probabilistic Robotics"，The MIT Press，2005}
+	\bibitem{amcl}{amcl，\url{http://wiki.ros.org/move_base}}
+	\bibitem{movebase}{move\_base， \url{http://wiki.ros.org/move_base}}
+	\bibitem{gazebo}{Gazebo ， \url{http://gazebosim．org/} }
+\end{thebibliography}	
+
+
+\end{document}
