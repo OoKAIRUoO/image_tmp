@@ -8,6 +8,7 @@
 
 \newcommand{\figref}[1]{図\ref{#1}}
 \newcommand{\subfigref}[2]{図\ref{#1}\subref{#2}}
+\renewcommand{\eqref}[1]{式(\ref{#1})}
 
 
 
@@ -49,7 +50,6 @@
 }
 \makeatother
 
-\title{屋内における見回りロボットの開発} % 論文タイトル
 \date{\today} % 日付
 \faculty{学部（工学）} % 学部
 \department{情報・知能工学課程} % 所属課程
@@ -65,13 +65,14 @@
 %	\newpage
 	
 %---概要---%
-\input{1.tex}
-\input{2.tex}
+\input{1.tex}\newpage
+\input{2.tex}\newpage
 \input{3.tex}
-\newpage
 \begin{thebibliography}{9}
 	\fontsize{8.5pt}{0pt}\selectfont
 	\bibitem{bunken1}{M.ボウン，E.ウォルフ，(訳:草川徹・横田英嗣)，"\ 光学の原理I\ "，1994年第八版}
+	\bibitem{bunken2}{Mejiro Genossen，"\ 光学設計の基礎知識\ "}
+	\bibitem{bunken3}{左貝潤一，"\ 光学機器の知識\ ",2013年第一版}
 	\bibitem{cite1}{ニコン，"双顕微鏡の構造と光学技術"，\url{http://www.nikonvision.co.jp/how_to/guide/binoculars/technologies/technologies_08.htm}}
 \end{thebibliography}	
 
